@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #09090e;
+    --color-card: #12121e;
+    --color-primary-red: #da292a;
+    --color-gold: #cfa851;
+    --color-gold-hover: #b89342;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar for Esports look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27273F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #da292a;
+}
+
+/* Glowing effects for gamers */
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(207, 168, 81, 0.4);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 10px rgba(218, 41, 42, 0.5);
+}
+
+.card-glow-red:hover {
+  box-shadow: 0 0 15px rgba(218, 41, 42, 0.15);
+  border-color: rgba(218, 41, 42, 0.3);
+}
+
+/* Heart pop keyframes for livestream love hits */
+@keyframes heartPulse {
+  0% {
+    transform: scale(0.3) translateY(0);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1.1) translateY(-20px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.8) translateY(-120px) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.heart-bubble {
+  position: absolute;
+  animation: heartPulse 1.8s ease-out forwards;
+}
+
+/* Simple fade transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: pathEnter 0.3s ease-out forwards;
+}
+
+@keyframes pathEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

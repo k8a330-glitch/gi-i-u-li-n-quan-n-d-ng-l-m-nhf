@@ -1,0 +1,11 @@
+{
+  "name": "Liên Quân Mobile Esports Hub",
+  "description": "Trang web giải đấu Liên Quân Mobile Đơn Dương - Lâm Đồng chuyên nghiệp với livestream trực tuyến, bảng đấu bracket, tin tức hình ảnh và trợ lý ảo Krixi nhận diện đồng dạng.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
